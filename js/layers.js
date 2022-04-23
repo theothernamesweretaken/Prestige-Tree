@@ -2,7 +2,7 @@ addLayer("p", {
         name: "prestige", // This is optional, only used in a few places, If absent it just uses the layer id.
         symbol: "P", // This appears on the layer's node. Default is the id with the first letter capitalized
         position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
-        color: "#31aeb0",
+        color: "#dfdfdf",
         requires: new Decimal(10), // Can be a function that takes requirement increases into account
         resource: "prestige points", // Name of prestige currency
         baseResource: "points", // Name of resource prestige is based on
@@ -282,7 +282,7 @@ addLayer("b", {
         name: "boosters", // This is optional, only used in a few places, If absent it just uses the layer id.
         symbol: "B", // This appears on the layer's node. Default is the id with the first letter capitalized
         position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
-        color: "#6e64c4",
+        color: "#dfdfdf",
         requires() { return new Decimal(200).times((player.b.unlockOrder&&!player.b.unlocked)?5000:1) }, // Can be a function that takes requirement increases into account
         resource: "boosters", // Name of prestige currency
         baseResource: "points", // Name of resource prestige is based on
@@ -549,7 +549,7 @@ addLayer("b", {
 		},
 })
 
-addLayer("g", {
+addLayer("dfdfdf", {
         name: "generators", // This is optional, only used in a few places, If absent it just uses the layer id.
         symbol: "G", // This appears on the layer's node. Default is the id with the first letter capitalized
         position: 1, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
@@ -908,7 +908,7 @@ addLayer("t", {
 			pseudoUpgs: [],
 			autoExt: false,
         }},
-        color: "#006609",
+        color: "#dfdfdf",
         requires() { return new Decimal(1e120).times(Decimal.pow("1e180", Decimal.pow(player[this.layer].unlockOrder, 1.415038))) }, // Can be a function that takes requirement increases into account
         resource: "time capsules", // Name of prestige currency
         baseResource: "points", // Name of resource prestige is based on
@@ -1299,7 +1299,7 @@ addLayer("t", {
 		},
 })
 
-addLayer("e", {
+addLayer("dfdfdf", {
         name: "enhance", // This is optional, only used in a few places, If absent it just uses the layer id.
         symbol: "E", // This appears on the layer's node. Default is the id with the first letter capitalized
         position: 2, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
@@ -2452,7 +2452,7 @@ addLayer("sb", {
         name: "super boosters", // This is optional, only used in a few places, If absent it just uses the layer id.
         symbol: "SB", // This appears on the layer's node. Default is the id with the first letter capitalized
         position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
-        color: "#504899",
+        color: "#dfdfdf",
         requires: new Decimal(100), // Can be a function that takes requirement increases into account
         resource: "super boosters", // Name of prestige currency
         baseResource: "boosters", // Name of resource prestige is based on
@@ -2527,7 +2527,7 @@ addLayer("sg", {
         name: "super generators", // This is optional, only used in a few places, If absent it just uses the layer id.
         symbol: "SG", // This appears on the layer's node. Default is the id with the first letter capitalized
         position: 4, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
-        color: "#248239",
+        color: "#dfdfdf",
         requires: new Decimal(200), // Can be a function that takes requirement increases into account
         resource: "super generators", // Name of prestige currency
         baseResource: "generators", // Name of resource prestige is based on
@@ -2623,7 +2623,7 @@ addLayer("h", {
 			first: 0,
 			auto: false,
         }},
-        color: "#a14040",
+        color: "#dfdfdf",
         requires: new Decimal(1e30), // Can be a function that takes requirement increases into account
         resource: "hindrance spirit", // Name of prestige currency
         baseResource: "time energy", // Name of resource prestige is based on
@@ -2929,7 +2929,7 @@ addLayer("q", {
 			first: 0,
 			pseudoUpgs: [],
         }},
-        color: "#c20282",
+        color: "#dfdfdf",
         requires: new Decimal("1e512"), // Can be a function that takes requirement increases into account
         resource: "quirks", // Name of prestige currency
         baseResource: "generator power", // Name of resource prestige is based on
@@ -3536,7 +3536,7 @@ addLayer("o", {
         }},
 		increaseUnlockOrder: ["ss"],
 		roundUpCost: true,
-        color: "#ffcd00",
+        color: "#dfdfdf",
 		nodeStyle() {return {
 			"background": (((player.o.unlocked||canReset("o"))&&!(Array.isArray(tmp.ma.canBeMastered)&&player.ma.selectionActive&&tmp[this.layer].row<tmp.ma.rowLimit&&!tmp.ma.canBeMastered.includes(this.layer))))?((player.grad&&!player.oldStyle)?"radial-gradient(#ffcd00, #ff4300)":"#ff8200"):"#bf8f8f" ,
         }},
@@ -3907,7 +3907,7 @@ addLayer("ss", {
 			auto: false,
 			first: 0,
         }},
-        color: "#e8ffff",
+        color: "#dfdfdf",
         requires() { return new Decimal((player[this.layer].unlockOrder>0&&!hasAchievement("a", 62))?30:28) }, // Can be a function that takes requirement increases into account
 		roundUpCost: true,
         resource: "subspace energy", // Name of prestige currency
@@ -4151,7 +4151,7 @@ addLayer("m", {
 			auto: false,
 			first: 0,
         }},
-        color: "#eb34c0",
+        color: "#dfdfdf",
         requires: new Decimal(1e285), // Can be a function that takes requirement increases into account
         resource: "magic", // Name of prestige currency
         baseResource: "hindrance spirit", // Name of resource prestige is based on
@@ -4519,7 +4519,7 @@ addLayer("ba", {
 			keepPosNeg: false,
 			first: 0,
         }},
-        color: "#fced9f",
+        color: "#dfdfdf",
         requires: new Decimal("1e365"), // Can be a function that takes requirement increases into account
         resource: "balance energy", // Name of prestige currency
         baseResource: "quirks", // Name of resource prestige is based on
@@ -4835,7 +4835,7 @@ addLayer("ps", {
 			autoGhost: false,
 			first: 0,
         }},
-        color: "#b38fbf",
+        color: "#dfdfdf",
         requires() { return new Decimal("1e16000") }, // Can be a function that takes requirement increases into account
         resource: "phantom souls", // Name of prestige currency
         baseResource: "quirk energy", // Name of resource prestige is based on
@@ -5150,7 +5150,7 @@ addLayer("hn", {
 			total: new Decimal(0),
 			first: 0,
         }},
-        color: "#ffbf00",
+        color: "#dfdfdf",
 		nodeStyle() {return {
 			"background-color": (((player.hn.unlocked||canReset("hn"))&&!(Array.isArray(tmp.ma.canBeMastered)&&player.ma.selectionActive&&tmp[this.layer].row<tmp.ma.rowLimit&&!tmp.ma.canBeMastered.includes(this.layer)))?"#ffbf00":"#bf8f8f"),
         }},
@@ -5765,7 +5765,7 @@ addLayer("n", {
 			activeSecondaries: {purpleBlue: false, blueOrange: false, orangePurple: false},
 			first: 0,
         }},
-        color: "#430082",
+        color: "#dfdfdf",
 		nodeStyle() { return {
 			"background-color": (((player.n.unlocked||canReset("n"))&&!(Array.isArray(tmp.ma.canBeMastered)&&player.ma.selectionActive&&tmp[this.layer].row<tmp.ma.rowLimit&&!tmp.ma.canBeMastered.includes(this.layer)))?"#430082":"#bf8f8f"),
 			color: (player.oldStyle?"white":"rgba(255, 255, 255, 0.75)"),
@@ -5994,7 +5994,7 @@ addLayer("hs", {
 			auto: false,
         }},
 		roundUpCost: true,
-        color: "#dfdfff",
+        color: "#dfdfdf",
         requires() { return new Decimal((player[this.layer].unlockOrder>0&&!hasAchievement("a", 92))?420:360) }, // Can be a function that takes requirement increases into account
 		increaseUnlockOrder: ["n"],
         resource: "hyperspace energy", // Name of prestige currency 
@@ -6434,7 +6434,7 @@ addLayer("i", {
 			auto: false,
 			first: 0,
         }},
-        color: "#e5dab7",
+        color: "#dfdfdf",
         requires() { return new Decimal("1e11750") }, // Can be a function that takes requirement increases into account
         resource: "imperium bricks", // Name of prestige currency
         baseResource: "subspace", // Name of resource prestige is based on
@@ -6691,7 +6691,7 @@ addLayer("ma", {
 			selectionActive: false,
 			current: null,
         }},
-        color: "#ff9f7f",
+        color: "#dfdfdf",
         requires() { return new Decimal(100) }, // Can be a function that takes requirement increases into account
         resource: "mastery", // Name of prestige currency
         baseResource: "phantom souls", // Name of resource prestige is based on
@@ -6932,7 +6932,7 @@ addLayer("ge", {
 			auto: false,
 			autoTime: new Decimal(0),
         }},
-        color: "#bfbfbf",
+        color: "#dfdfdf",
 		nodeStyle() { return {
 			background: (player.ge.unlocked||canReset("ge"))?((player.grad&&!player.oldStyle)?"radial-gradient(circle, #bfbfbf 0%, #838586 100%)":"#838586"):"#bf8f8f",
 		}},
@@ -7260,7 +7260,7 @@ addLayer("mc", {
 			autoSE: false,
 			auto: false,
         }},
-        color: "#c99a6b",
+        color: "#dfdfdf",
 		nodeStyle() { return {
 			background: (player.mc.unlocked||canReset("mc"))?((player.grad&&!player.oldStyle)?"radial-gradient(circle, #c99a6b 0%, #706d6d 100%)":"#c99a6b"):"#bf8f8f",
 		}},
@@ -7565,7 +7565,7 @@ addLayer("en", {
 			mw: new Decimal(0),
 			first: 0,
         }},
-        color: "#fbff05",
+        color: "#dfdfdf",
 		nodeStyle() {return {
 			"background-color": (((player.en.unlocked||canReset("en"))&&!(Array.isArray(tmp.ma.canBeMastered)&&player.ma.selectionActive&&tmp[this.layer].row<tmp.ma.rowLimit&&!tmp.ma.canBeMastered.includes(this.layer)))?"#fbff05":"#bf8f8f"),
         }},
@@ -7769,7 +7769,7 @@ addLayer("ne", {
 			auto: false,
 			autoNN: false,
         }},
-        color: "#ded9ff",
+        color: "#dfdfdf",
         requires() { return (player[this.layer].unlockOrder>0&&!player.ne.unlocked)?new Decimal("1e1160000"):new Decimal("1e1000000") }, // Can be a function that takes requirement increases into account
 		increaseUnlockOrder: ["en"],
         resource: "neurons", // Name of prestige currency
@@ -7993,7 +7993,7 @@ addLayer("id", {
 			first: 0,
 			auto: false,
         }},
-        color: "#fad682",
+        color: "#dfdfdf",
         requires() { 
 			let req = new Decimal(44);
 			if (player.ai.unlocked && tmp.ai) req = req.div(tmp.ai.conscEff2);
@@ -8110,7 +8110,7 @@ addLayer("r", {
 			deathTime: new Decimal(0),
 			first: 0,
         }},
-        color: "#00ccff",
+        color: "#dfdfdf",
 		nodeStyle() { return {
 			background: (player.r.unlocked||canReset("r"))?((player.grad&&!player.oldStyle)?"radial-gradient(circle, #00ccff 0%, #b0b0b0 75%)":"#b0b0b0"):"#bf8f8f",
 		}},
@@ -8459,7 +8459,7 @@ addLayer("ai", {
 			time: new Decimal(0),
 			consc: new Decimal(0),
         }},
-        color: "#e6ffcc",
+        color: "#dfdfdf",
 		nodeStyle() { return {
 			background: (player.ai.unlocked||canReset("ai"))?((player.grad&&!player.oldStyle)?"radial-gradient(circle, #e6ffcc 0%, #566b65 100%)":"#e6ffcc"):"#bf8f8f",
 		}},
@@ -8946,7 +8946,7 @@ addLayer("c", {
 			gainedPower: [new Decimal(0), new Decimal(0), new Decimal(0), new Decimal(0), new Decimal(0)],
 			first: 0,
         }},
-        color: "#edb3ff",
+        color: "#dfdfdf",
         requires() { return Decimal.sub(108, hasAchievement("a", 164)?player.c.buyables[11].times(2):0).max(8) }, // Can be a function that takes requirement increases into account
         resource: "civilization power", // Name of prestige currency
         baseResource: "imperium bricks", // Name of resource prestige is based on
@@ -9136,7 +9136,7 @@ addLayer("a", {
         startData() { return {
             unlocked: true,
         }},
-        color: "yellow",
+        color: "white",
         row: "side",
         layerShown() {return true}, 
         tooltip() { // Optional, tooltip displays when the layer is locked
@@ -9656,7 +9656,7 @@ addLayer("a", {
 
 addLayer("sc", {
 	startData() { return {unlocked: true}},
-	color: "#e6ff69",
+	color: "#dfdfdf",
 	symbol: "SC",
 	row: "side",
 	layerShown() { return hasAchievement("a", 21) && player.scShown },
@@ -9679,7 +9679,7 @@ addLayer("sc", {
 
 addLayer("ab", {
 	startData() { return {unlocked: true}},
-	color: "yellow",
+	color: "white",
 	symbol: "AB",
 	row: "side",
 	layerShown() { return player.t.unlocked || player.s.unlocked },
